@@ -43,5 +43,6 @@ public class PlayerController : MonoBehaviour
     {
         isFlipped = !isFlipped;
         transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, transform.localScale.z);
+        rb.gravityScale = isFlipped ? -1f : 1f;
     }
 }
